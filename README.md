@@ -27,22 +27,16 @@ This website has been forked from [Brittany Chiang's](https://github.com/bchiang
    npm install -g gatsby-cli
    ```
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+2. Install dependencies
 
    ```sh
-   nvm install
+   npm install
    ```
 
-3. Install dependencies
+3. Start the development server
 
    ```sh
-   yarn
-   ```
-
-4. Start the development server
-
-   ```sh
-   npm start
+   gatsby develop
    ```
 
 ## 🚀 Building and Running for Production
