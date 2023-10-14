@@ -61,27 +61,26 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Zoë Despature.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const three = <h3 className="big-heading">I make technology human</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        I'm a biomedical engineer dedicated to infusing empathy into technology. I leverage my
+        engineering degree from{' '}
+        <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
+          Imperial College London{' '}
+        </a>{' '}
+        to coordinate cross-functional teams and drive successful project outcomes.
       </p>
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://www.linkedin.com/in/zoe-despature/"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      Connect with me!
     </a>
   );
 

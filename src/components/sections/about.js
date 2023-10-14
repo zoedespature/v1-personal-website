@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['Python', 'Gatsby', 'MATLAB', 'React', 'SQL', 'Node.js'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,30 +135,31 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Zoe and I enjoy connecting with people just as much as I love tech.
+              My interest in development started back in 2012, when my mom needed a website for her
+              cooking classes business. I then watched Benoit Mandelbrot's{' '}
+              <a href="https://www.youtube.com/watch?v=ay8OMOsf6AQ&ab_channel=TED&themeRefresh=1">
+                TED talk
+              </a>{' '}
+              and Grey's anatomy (no comment), and I decided that the best combination of these
+              subjects were in the world of biotech.
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              <a href="https://www.pathfindermed.com/">a biotech start-up</a>,{' '}
+              <a href="https://developmental-biomechanics.org/">a university lab</a>,{' '}
+              <a href="https://www.slb.com/">a huge corporation</a>, and{' '}
+              <a href="https://www.virtualimperial.com/">a student-led Minecraft project</a>. My
+              main focus these days is bringing the wide set of skills I gathered throughout these
+              experiences to change the way we manage in biotech.
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              I recently completed the{' '}
+              <a href="https://irdeto.com/graduate-program/">Irdeto Graduate Program</a> in Software
+              Engineering &amp; Cyber-Security, where I got to experience being a software engineer
+              and a project manager in important company-wide projects.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
