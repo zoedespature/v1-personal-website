@@ -135,10 +135,10 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Zoe and I enjoy connecting with people just as much as I love tech.
-              My interest in development started back in 2012, when my mom needed a website for her
-              cooking classes business. I was also a big fan of Grey's anatomy (no comment) - what's
-              a better combination of these subjects than &#10024;biotech&#10024;?
+              Hello! My name is Zoë and I enjoy connecting with people just as much as I love tech.
+              My interest in development started when I was 13 and my mom needed a website for her
+              cooking class business. I was also a big fan of Grey's Anatomy (no comment) - what's a
+              better combination of these subjects than &#10024;biotech&#10024;?
             </p>
 
             <p>

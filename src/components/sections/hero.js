@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { TypeAnimation } from 'react-type-animation';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -37,7 +38,7 @@ const StyledHeroSection = styled.section`
 
   p {
     margin: 20px 0 0;
-    max-width: 540px;
+    max-width: 600px;
   }
 
   .email-link {
@@ -60,29 +61,46 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Zoë Despature.</h2>;
+  const two = <h2 className="big-heading">Zoë Despature</h2>;
   const three = <h3 className="big-heading">I make technology human</h3>;
   const four = (
-    <>
+    <div style={{ margin: '20px 0 40px 0' }}>
       <p>
-        I'm a biomedical engineer dedicated to infusing empathy into technology. I leverage my
-        engineering degree from{' '}
+        I'm a biomedical engineer with the ambition to introduce people-centered values into the
+        biotechnology landscape. I leverage my engineering degree from{' '}
         <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
           Imperial College London
         </a>{' '}
         and experience across different business functions to change the way we manage in biotech.
       </p>
-    </>
+    </div>
   );
   const five = (
-    <a
-      className="email-link"
-      href="https://www.linkedin.com/in/zoe-despature/"
-      target="_blank"
-      rel="noreferrer">
-      Connect with me!
-    </a>
+    <TypeAnimation
+      style={{ whiteSpace: 'pre-line', height: '90px', display: 'block' }}
+      speed={65}
+      deletionSpeed={90}
+      cursor={true}
+      sequence={[
+        '✨❯ I\'m looking for a new opportunity in biotech! 🧬 \n\n ✨❯ As a Software Developer \n\n ✨❯ As a Project Manager...',
+        3000,
+        '✨❯',
+        1000,
+      ]}
+      wrapper="h1"
+      repeat={Infinity}
+    />
   );
+  // const six = (
+  //   <a
+  //     className="email-link"
+  //     href="https://www.linkedin.com/in/zoe-despature/"
+  //     target="_blank"
+  //     rel="noreferrer"
+  //     style={{ margin: '40px 0 0 0'}}>
+  //     Connect with me!
+  //   </a>
+  // );
 
   const items = [one, two, three, four, five];
 

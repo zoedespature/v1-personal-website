@@ -6,7 +6,7 @@ external: './masters_thesis.pdf'
 tech:
   - MATLAB
   - Simulink
-  - Regression
+  - Regression Algorithms
 ---
 
 I had the privilege of working in [Prof. Dr. Dario Farina](https://scholar.google.com/citations?user=0JDIQ0wAAAAJ&hl=en)'s lab alongside his postdocs at Imperial College London.
