@@ -137,12 +137,8 @@ const About = () => {
             <p>
               Hello! My name is Zoe and I enjoy connecting with people just as much as I love tech.
               My interest in development started back in 2012, when my mom needed a website for her
-              cooking classes business. I then watched Benoit Mandelbrot's{' '}
-              <a href="https://www.youtube.com/watch?v=ay8OMOsf6AQ&ab_channel=TED&themeRefresh=1">
-                TED talk
-              </a>{' '}
-              and Grey's anatomy (no comment), and I decided that the best combination of these
-              subjects were in the world of biotech.
+              cooking classes business. I was also a big fan of Grey's anatomy (no comment) - what's
+              a better combination of these subjects than &#10024;biotech&#10024;?
             </p>
 
             <p>

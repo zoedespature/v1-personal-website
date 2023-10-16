@@ -68,9 +68,9 @@ const Hero = () => {
         I'm a biomedical engineer dedicated to infusing empathy into technology. I leverage my
         engineering degree from{' '}
         <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
-          Imperial College London{' '}
+          Imperial College London
         </a>{' '}
-        to coordinate cross-functional teams and drive successful project outcomes.
+        and experience across different business functions to change the way we manage in biotech.
       </p>
     </>
   );

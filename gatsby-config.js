@@ -3,7 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Zoe Despature',
-    description: 'Zoë Despature is a biomedical engineer ',
+    description: 'Zoë Despature is a biomedical engineer',
     siteUrl: 'https://zoedespature.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@zoedespature',
