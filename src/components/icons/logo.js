@@ -4,53 +4,45 @@ const IconLogo = () => (
   <svg
     id="logo"
     xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
     role="img"
-    width="132" // Rounded width
-    height="64" // Rounded height
-    viewBox="138 158 140 70" // Rounded viewBox
-  >
+    width={52}
+    height={52}
+    viewBox="266.741 4.876 157.425 157.425">
     <title>Logo</title>
-    <g transform="translate(-8, -2)">
-      <g transform="translate(11, 5)">
-        <g transform="matrix(1 0 0 1 166 190)">
-          <path
-            style={{
-              stroke: 'rgb(140,53,59)',
-              strokeWidth: 20, // Slightly rounded stroke width
-              strokeDasharray: 'none',
-              strokeLinecap: 'butt',
-              strokeDashoffset: 0,
-              strokeLinejoin: 'round', // Rounded strokeLinejoin
-              strokeMiterlimit: 4,
-              fill: 'rgb(249,245,244)',
-              fillRule: 'nonzero',
-              opacity: 1,
-            }}
-            transform="translate(-22, -22)"
-            d="M 22 0 C 35 0 45 10 45 22 C 45 35 35 45 22 45 C 10 45 0 35 0 22 C 0 10 10 0 22 0 z"
-            strokeLinecap="round"
-          />
-        </g>
-        <g transform="matrix(1 0 0 1 238 190)">
-          <path
-            style={{
-              stroke: 'rgb(140,53,59)',
-              strokeWidth: 20, // Slightly rounded stroke width
-              strokeDasharray: 'none',
-              strokeLinecap: 'butt',
-              strokeDashoffset: 0,
-              strokeLinejoin: 'round', // Rounded strokeLinejoin
-              strokeMiterlimit: 4,
-              fill: 'rgb(249,245,244)',
-              fillRule: 'nonzero',
-              opacity: 1,
-            }}
-            transform="translate(-22, -22)"
-            d="M 22 0 C 35 0 45 10 45 22 C 45 35 35 45 22 45 C 10 45 0 35 0 22 C 0 10 10 0 22 0 z"
-            strokeLinecap="round"
-          />
-        </g>
-      </g>
+    <g>
+      <path
+        d="M0-27.902c15.402 0 27.902 12.5 27.902 27.902 0 15.402-12.5 27.902-27.902 27.902-15.402 0-27.902-12.5-27.902-27.902 0-15.402 12.5-27.902 27.902-27.902z"
+        style={{
+          stroke: '#5363c1',
+          strokeWidth: 0,
+          strokeDasharray: 'none',
+          strokeLinecap: 'butt',
+          strokeDashoffset: 0,
+          strokeLinejoin: 'miter',
+          strokeMiterlimit: 4,
+          fill: '#000',
+          fillRule: 'nonzero',
+          opacity: 1,
+        }}
+        transform="matrix(.94145 0 0 .94145 311.393 83.589)"
+      />
+      <path
+        d="M0-27.902c15.402 0 27.902 12.5 27.902 27.902 0 15.402-12.5 27.902-27.902 27.902-15.402 0-27.902-12.5-27.902-27.902 0-15.402 12.5-27.902 27.902-27.902z"
+        style={{
+          stroke: '#5363c1',
+          strokeWidth: 0,
+          strokeDasharray: 'none',
+          strokeLinecap: 'butt',
+          strokeDashoffset: 0,
+          strokeLinejoin: 'miter',
+          strokeMiterlimit: 4,
+          fill: '#000',
+          fillRule: 'nonzero',
+          opacity: 1,
+        }}
+        transform="matrix(.94145 0 0 .94145 384.764 83.589)"
+      />
     </g>
   </svg>
 );

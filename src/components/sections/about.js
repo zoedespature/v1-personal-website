@@ -33,7 +33,7 @@ const StyledText = styled.div`
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+      font-size: var(--fz-md);
 
       &:before {
         content: '▹';
@@ -125,7 +125,14 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Gatsby', 'MATLAB', 'React', 'SQL', 'Node.js'];
+  const skills = [
+    'French 👌',
+    'German 👍',
+    'English 👌',
+    'Italian 🤌',
+    'Swiss German 👌',
+    'Dutch 🤏',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,6 +149,15 @@ const About = () => {
             </p>
 
             <p>
+              A bit about myself: <br></br>
+              🇫🇷 &emsp; I was born in Bar-le-Duc, France <br></br>
+              🇸🇬 &emsp; I grew up in Singapore <br></br>
+              🇬🇧 &emsp; I studied in London, UK <br></br>
+              🇳🇱 &emsp; I worked in Amsterdam, The Netherlands <br></br>
+              🇨🇭 &emsp; Currently based in Nyon, Switzerland <br></br>
+            </p>
+
+            {/* <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
               <a href="https://www.pathfindermed.com/">a biotech start-up</a>,{' '}
               <a href="https://developmental-biomechanics.org/">a university lab</a>,{' '}
@@ -156,14 +172,18 @@ const About = () => {
               <a href="https://irdeto.com/graduate-program/">Irdeto Graduate Program</a> in Software
               Engineering &amp; Cyber-Security, where I got to experience being a software engineer
               and a project manager in important company-wide projects.
-            </p>
+            </p> */}
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>I speak:</p>
           </div>
 
           <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
+          <p>
+            <br></br>If I'm not behind my computer, I'm most likely running, cycling, playing the
+            piano or making sourdough bread.
+          </p>
         </StyledText>
 
         <StyledPic>
