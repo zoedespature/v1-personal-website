@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-import { TypeAnimation } from 'react-type-animation';
+import TypeAnimation from 'react-type-animation';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -75,23 +75,24 @@ const Hero = () => {
       </p>
     </div>
   );
-  const five = (
+  const five = <h1> ✨❯ I'm looking for a new opportunity in biotech! 🧬</h1>;
+  const six = (
     <TypeAnimation
-      style={{ whiteSpace: 'pre-line', height: '90px', display: 'block' }}
       speed={65}
-      deletionSpeed={90}
       cursor={true}
       sequence={[
-        '✨❯ I\'m looking for a new opportunity in biotech! 🧬 \n\n ✨❯ As a Software Developer \n\n ✨❯ As a Project Manager...',
-        3000,
-        '✨❯',
+        '✨❯ As a Software Developer...',
+        1000,
+        '✨❯ As a Project Manager...',
+        1000,
+        '✨❯ As a Research Engineer...',
         1000,
       ]}
       wrapper="h1"
       repeat={Infinity}
     />
   );
-  // const six = (
+  // const five = (
   //   <a
   //     className="email-link"
   //     href="https://www.linkedin.com/in/zoe-despature/"
@@ -102,7 +103,7 @@ const Hero = () => {
   //   </a>
   // );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>

@@ -1,9 +1,4 @@
 {
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "root": true,
   "extends": "@upstatement/eslint-config/react"
 }
