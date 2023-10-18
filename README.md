@@ -5,8 +5,8 @@
   Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
+  <a href="https://app.netlify.com/sites/regal-salamander-52b40f/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/ce95de5f-c42b-4899-a70e-c4d8444d99eb/deploy-status" alt="Netlify Status" />
   </a>
 </p>
 

@@ -2,7 +2,7 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Zoe Despature',
+    title: 'Zoë Despature',
     description: 'Zoë Despature is a biomedical engineer',
     siteUrl: 'https://zoedespature.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Zoe Despature',
-        short_name: 'Zoe Despature',
+        name: 'Zoë Despature',
+        short_name: 'Zoë Despature',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
