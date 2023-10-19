@@ -1,26 +1,57 @@
 import React from 'react';
 
 const IconLoader = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <svg
+    id="logo"
+    xmlns="http://www.w3.org/2000/svg"
+    width="850"
+    height="240"
+    viewBox="266.7410708630965 48.374436332683516 157.4253062769945 70.42837208118786">
     <title>Loader Logo</title>
     <g>
-      <g id="B" transform="translate(11.000000, 5.000000)">
+      <g id="underscore">
         <path
-          d="M45.691667,45.15 C48.591667,46.1 50.691667,48.95 50.691667,52.2 C50.691667,57.95 46.691667,61 40.291667,61 L28.541667,61 L28.541667,30.3 L39.291667,30.3 C45.691667,30.3 49.691667,33.15 49.691667,38.65 C49.691667,41.95 47.941667,44.35 45.691667,45.15 Z M33.591667,43.2 L39.241667,43.2 C42.791667,43.2 44.691667,41.85 44.691667,38.95 C44.691667,36.05 42.791667,34.8 39.241667,34.8 L33.591667,34.8 L33.591667,43.2 Z M33.591667,47.5 L33.591667,56.5 L40.191667,56.5 C43.691667,56.5 45.591667,54.75 45.591667,52 C45.591667,49.2 43.691667,47.5 40.191667,47.5 L33.591667,47.5 Z"
-          fill="currentColor"
+          stroke="#5363c1"
+          strokeWidth="0"
+          strokeDasharray="none"
+          strokeLinecap="butt"
+          strokeDashoffset="0"
+          strokeLinejoin="miter"
+          strokeMiterlimit="4"
+          fill="#000"
+          fillRule="nonzero"
+          opacity="1"
+          d="M0-27.902c15.402 0 27.902 12.5 27.902 27.902 0 15.402-12.5 27.902-27.902 27.902-15.402 0-27.902-12.5-27.902-27.902 0-15.402 12.5-27.902 27.902-27.902z"
+          transform="translate(311.392 83.589) scale(.94146)"
+        />
+        <path
+          stroke="#5363c1"
+          strokeWidth="0"
+          strokeDasharray="none"
+          strokeLinecap="butt"
+          strokeDashoffset="0"
+          strokeLinejoin="miter"
+          strokeMiterlimit="4"
+          fill="#000"
+          fillRule="nonzero"
+          opacity="1"
+          d="M0-27.902c15.402 0 27.902 12.5 27.902 27.902 0 15.402-12.5 27.902-27.902 27.902-15.402 0-27.902-12.5-27.902-27.902 0-15.402 12.5-27.902 27.902-27.902z"
+          transform="translate(384.766 83.589) scale(.94146)"
         />
       </g>
       <path
-        stroke="currentColor"
-        strokeWidth="5"
+        stroke="#fadb39"
+        strokeWidth="41"
+        strokeDasharray="none"
         strokeLinecap="round"
+        strokeDashoffset="0"
         strokeLinejoin="round"
-        d="M 50, 5
-                  L 11, 27
-                  L 11, 72
-                  L 50, 95
-                  L 89, 73
-                  L 89, 28 z"
+        strokeMiterlimit="10"
+        fill="#fadb39"
+        fillRule="nonzero"
+        opacity=".77"
+        transform="matrix(1.3211 0 0 1.13185 215.703 -64.83)"
+        d="M59.133 141.741h2.809q1.116 0 4.464-.558 3.348-.558 7.813-1.953 4.464-1.395 7.533-1.953 3.07-.558 6.139-1.395 3.069-.837 6.138-1.953 3.07-1.117 5.86-1.954 2.79-.837 6.417-1.953t5.86-1.674q2.231-.558 3.905-1.395 1.675-.837 6.418-2.232 4.743-1.395 5.301-1.395.558 0 1.395-.28.837-.278 1.953-.557 1.116-.28 1.674-.558.559-.28 1.117-.28.558 0 1.116-.278.558-.28.837-.28h.558q.279 0 .558-.278l.298-.298"
       />
     </g>
   </svg>
