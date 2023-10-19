@@ -3,7 +3,7 @@ date: '2'
 title: 'NeuroMatch Academy'
 cover: './demo.png'
 # github: 'https://github.com/bchiang7/spotify-profile'
-# external: 'https://spotify-profile.herokuapp.com/'
+external: 'https://academy.neuromatch.io/'
 tech:
   - Python
   - RL

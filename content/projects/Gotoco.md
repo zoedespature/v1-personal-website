@@ -2,9 +2,9 @@
 date: '2018-09-01'
 title: 'Volunteering in China'
 github: ''
-external: '/Users/zoedespature/Desktop/v1-personal-website/static/ZoeDespaturesTEFLCertificate.pdf'
+external: 'https://www.go-to.co/'
 company: 'GoToCo'
 showInProjects: true
 ---
 
-An exciting volunteering experience in Dongguan, Guangzhou, where I taught English to Chinese children and acquired my [TEFL degree](content/projects/documents/ZoeDespaturesTEFLCertificate.pdf).
+An exciting volunteering experience in Dongguan, Guangzhou, where I taught English to Chinese children and acquired my [TEFL degree](https://www.teflcourse.net/tefl-certification/?c=a4&g=3&gad=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEu2MTWCuACnLh5a0JWr9Tvzp9g48QKyl3CEOWfRwxiDCUC7ZaGXGtBoCo2sQAvD_BwE).

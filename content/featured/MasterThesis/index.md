@@ -2,7 +2,7 @@
 date: '1'
 title: 'Optimising Human-Robot Interactions'
 cover: './image.png'
-external: './masters_thesis.pdf'
+external: 'https://www.imperial.ac.uk/neurotechnology'
 tech:
   - MATLAB
   - Simulink
