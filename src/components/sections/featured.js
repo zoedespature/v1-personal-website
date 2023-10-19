@@ -283,6 +283,7 @@ const StyledProject = styled.li`
         bottom: 0;
         z-index: 3;
         transition: var(--transition);
+        background-color: var(--green-tint);
         mix-blend-mode: screen;
       }
     }
