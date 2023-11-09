@@ -67,15 +67,16 @@ const Hero = () => {
     <div style={{ margin: '20px 0 40px 0' }}>
       <p>
         I'm a biomedical engineer with the ambition to introduce people-centered values into the
-        biotechnology landscape. I leverage my engineering degree from{' '}
+        technology landscape. I leverage my engineering degree from{' '}
         <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
           Imperial College London
         </a>{' '}
-        and experience across different business functions to change the way we manage in biotech.
+        and experience across different business functions to integrate diverse skill sets into the
+        fabric of technological innovation.
       </p>
     </div>
   );
-  const five = <h1> ✨❯ I'm looking for a new opportunity in biotech! 🧬</h1>;
+  const five = <h1> ✨❯ I'm looking for a new opportunity in tech! 🧬</h1>;
   const six = (
     <TypeAnimation
       speed={65}

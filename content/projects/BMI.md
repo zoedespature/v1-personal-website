@@ -1,5 +1,5 @@
 ---
-date: '2021-03-01'
+date: '2000-12-31'
 title: 'Decoding a Monkey’s Motor Cortical Activity'
 github: 'https://github.com/zoedespature/BMI'
 external: 'https://github.com/zoedespature/BMI'
