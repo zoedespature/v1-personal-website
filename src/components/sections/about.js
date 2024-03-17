@@ -154,7 +154,7 @@ const About = () => {
               🇸🇬 &emsp; I grew up in Singapore <br></br>
               🇬🇧 &emsp; I studied in London, UK <br></br>
               🇳🇱 &emsp; I worked in Amsterdam, The Netherlands <br></br>
-              🇨🇭 &emsp; Currently based in Nyon, Switzerland <br></br>
+              🇨🇭 &emsp; Currently based in Bern, Switzerland <br></br>
             </p>
 
             {/* <p>

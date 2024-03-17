@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 import TypeAnimation from 'react-type-animation';
+import { translations } from '@config';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -47,9 +48,25 @@ const StyledHeroSection = styled.section`
   }
 `;
 
+const shuffleArray = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+
+  const seq = [];
+  for (const greeting of shuffleArray(translations)) {
+    seq.push(`✨❯ ${greeting.flag} 👋 ${greeting.text}`);
+    seq.push(1000);
+    seq.push(`✨❯`);
+    seq.push(1000);
+  }
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -60,9 +77,9 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
+  const one = <TypeAnimation cursor={true} sequence={seq} wrapper="h1" repeat={Infinity} />;
   const two = <h2 className="big-heading">Zoë Despature</h2>;
-  const three = <h3 className="big-heading">I make technology human</h3>;
+  const three = <h3 className="big-heading">I make human technology</h3>;
   const four = (
     <div style={{ margin: '20px 0 40px 0' }}>
       <p>
@@ -76,35 +93,35 @@ const Hero = () => {
       </p>
     </div>
   );
-  const five = <h1> ✨❯ I'm looking for a new opportunity in tech! 🧬</h1>;
-  const six = (
-    <TypeAnimation
-      speed={65}
-      cursor={true}
-      sequence={[
-        '✨❯ As a Software Developer...',
-        1000,
-        '✨❯ As a Project Manager...',
-        1000,
-        '✨❯ As a Research Engineer...',
-        1000,
-      ]}
-      wrapper="h1"
-      repeat={Infinity}
-    />
+  const five = (
+    <a
+      className="email-link"
+      href="https://www.linkedin.com/in/zoe-despature/"
+      target="_blank"
+      rel="noreferrer"
+      style={{ margin: '40px 0 0 0' }}>
+      Connect with me!
+    </a>
   );
-  // const five = (
-  //   <a
-  //     className="email-link"
-  //     href="https://www.linkedin.com/in/zoe-despature/"
-  //     target="_blank"
-  //     rel="noreferrer"
-  //     style={{ margin: '40px 0 0 0'}}>
-  //     Connect with me!
-  //   </a>
+  // const five = <h1> ✨❯ I'm looking for a new opportunity in tech! 🧬</h1>;
+  // const six = (
+  //   <TypeAnimation
+  //     speed={65}
+  //     cursor={true}
+  //     sequence={[
+  //       '✨❯ As a Software Developer...',
+  //       1000,
+  //       '✨❯ As a Project Manager...',
+  //       1000,
+  //       '✨❯ As a Research Engineer...',
+  //       1000,
+  //     ]}
+  //     wrapper="h1"
+  //     repeat={Infinity}
+  //   />
   // );
 
-  const items = [one, two, three, four, five, six];
+  const items = [one, two, three, four, five];
 
   return (
     <StyledHeroSection>

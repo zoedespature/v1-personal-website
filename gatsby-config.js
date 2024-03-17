@@ -3,7 +3,8 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Zoë Despature',
-    description: 'Zoë Despature is a biomedical engineer',
+    description:
+      'Hi! My name is Zoë Despature, I\'m a biomedical engineer with the ambition to introduce people-centered values into the technology landscape. I leverage my engineering degree from Imperial College London and experience across different business functions to integrate diverse skill sets into the fabric of technological innovation.',
     siteUrl: 'https://zoedespature.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@zoedespature',
