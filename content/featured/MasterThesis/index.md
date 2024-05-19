@@ -2,7 +2,8 @@
 date: '1'
 title: 'Optimising Human-Robot Interactions'
 cover: './image.png'
-external: 'https://www.imperial.ac.uk/neurotechnology'
+# external: 'https://www.imperial.ac.uk/neurotechnology'
+cta: 'masters_thesis_zoedespature.pdf'
 tech:
   - MATLAB
   - Simulink

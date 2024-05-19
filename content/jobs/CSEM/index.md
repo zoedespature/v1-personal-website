@@ -3,7 +3,7 @@ date: '2024-03-17'
 title: 'Full-Stack Developer Intern'
 company: 'CSEM'
 location: 'Bern, Switzerland'
-range: 'February 2023 - Today'
+range: 'February 2024 - Today'
 url: 'https://www.csem.ch/en/'
 ---
 
