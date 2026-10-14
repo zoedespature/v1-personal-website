@@ -10,10 +10,6 @@ module.exports = {
       name: 'GitHub',
       url: 'https://github.com/zoedespature',
     },
-    {
-      name: 'HuggingFace',
-      url: 'https://huggingface.co/zoedespature',
-    },
   ],
 
   navLinks: [
