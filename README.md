@@ -78,7 +78,9 @@ yarn format
 
 ## 🎨 Color Reference
 
-The CSS variable names in `src/styles/variables.js` are inherited from the original dark navy theme and no longer describe the colors they hold — `--navy` is an off-white, and `--lightest-slate` is nearly black.
+Most CSS variable names in `src/styles/variables.js` are inherited from the original dark navy theme and no longer describe the colors they hold — `--navy` is an off-white, and `--lightest-slate` is nearly black. `--ink` is the one that has been renamed to match this palette; it was `--white` (`#e6f1ff`), a pale blue that was illegible everywhere it was used.
+
+One leftover is deliberate: `--green-tint` is still the original teal, and tints the featured project images.
 
 | Variable           | Hex                                                                |
 | ------------------ | ------------------------------------------------------------------ |
@@ -88,5 +90,5 @@ The CSS variable names in `src/styles/variables.js` are inherited from the origi
 | `--slate`          | ![#BF8084](https://placehold.co/15x15/BF8084/BF8084.png) `#BF8084` |
 | `--light-slate`    | ![#1A1618](https://placehold.co/15x15/1A1618/1A1618.png) `#1A1618` |
 | `--lightest-slate` | ![#1A1618](https://placehold.co/15x15/1A1618/1A1618.png) `#1A1618` |
-| `--white`          | ![#e6f1ff](https://placehold.co/15x15/e6f1ff/e6f1ff.png) `#e6f1ff` |
+| `--ink`            | ![#1A1618](https://placehold.co/15x15/1A1618/1A1618.png) `#1A1618` |
 | `--green`          | ![#8C353B](https://placehold.co/15x15/8C353B/8C353B.png) `#8C353B` |
