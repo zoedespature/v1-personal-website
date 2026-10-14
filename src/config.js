@@ -26,8 +26,8 @@ module.exports = {
       url: '/#talks',
     },
     {
-      name: 'Research',
-      url: '/#research',
+      name: 'Work',
+      url: '/#work',
     },
     {
       name: 'Contact',

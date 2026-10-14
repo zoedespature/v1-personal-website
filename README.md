@@ -60,12 +60,12 @@ Netlify builds from `netlify.toml`, which pins the build command (`yarn build`),
 
 All site copy lives in markdown under `content/`, so most updates don't require touching any components:
 
-| Directory           | Renders in            | Notes                                                                                              |
-| ------------------- | --------------------- | -------------------------------------------------------------------------------------------------- |
-| `content/jobs/`     | Experience tabs       | Sorted by `date` descending. Set `showInTabs: false` to keep a role in the repo without showing it |
-| `content/talks/`    | Talks list            | Sorted by `date` descending. Title, event, location, optional `url`                                |
-| `content/featured/` | Research              | Currently the master's thesis only. Cover path is relative to the markdown file                    |
-| `content/projects/` | Selected earlier work | Only entries with `showInProjects: true`. A compact list, not cards                                |
+| Directory           | Renders in            | Notes                                                                                                           |
+| ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `content/jobs/`     | Experience tabs       | Sorted by `date` descending. Set `showInTabs: false` to keep a role in the repo without showing it              |
+| `content/talks/`    | Talks list            | Sorted by `date` descending. Title, event, location, optional `url`                                             |
+| `content/featured/` | Selected work         | Larger write-ups with a cover image, sorted by `date` descending. `overline` is the small label above the title |
+| `content/projects/` | Selected earlier work | Only entries with `showInProjects: true`. A compact list, not cards                                             |
 
 Paths in frontmatter behave differently depending on where the file lives. Covers are relative to the markdown file (`cover: './demo.png'`), while links to anything in `static/` must be absolute (`cta: '/masters_thesis_zoedespature.pdf'`) so they resolve from any page.
 

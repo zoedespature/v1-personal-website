@@ -84,19 +84,17 @@ const Hero = () => {
 
   const one = <TypeAnimation cursor={true} sequence={seq} wrapper="h1" repeat={Infinity} />;
   const two = <h2 className="big-heading">Zoë Despature</h2>;
-  const three = <h3 className="big-heading">R&D engineer, medical devices</h3>;
+  const three = <h3 className="big-heading">I build technology for people</h3>;
   const four = (
     <div style={{ margin: '20px 0 40px 0' }}>
       <p>
-        Biomedical engineer from{' '}
+        I'm a biomedical engineer from{' '}
         <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
           Imperial College London
-        </a>
-        . I work on the software and systems around clinical devices, currently at{' '}
-        <a href="https://www.csem.ch/en/" target="_blank" rel="noreferrer">
-          CSEM
         </a>{' '}
-        in Bern.
+        driven by a simple goal: use technology to make people's lives better. With a background in
+        software development, I'm focused on engineering a brighter, more compassionate future for
+        all.
       </p>
     </div>
   );

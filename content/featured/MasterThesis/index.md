@@ -1,7 +1,8 @@
 ---
-date: '1'
+date: '2021-06-01'
 title: 'Optimising Human-Robot Interactions'
 cover: './image.png'
+overline: "Master's thesis"
 cta: '/masters_thesis_zoedespature.pdf'
 tech:
   - MATLAB

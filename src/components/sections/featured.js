@@ -307,12 +307,13 @@ const Featured = () => {
     {
       featured: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/featured/" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
           node {
             frontmatter {
               title
+              overline
               cover {
                 childImageSharp {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -345,16 +346,16 @@ const Featured = () => {
   }, [prefersReducedMotion]);
 
   return (
-    <section id="research">
+    <section id="work">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Research
+        Selected work
       </h2>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const { external, title, tech, github, cover, cta, overline } = frontmatter;
             const image = getImage(cover);
             const projectUrl = external || github || cta || undefined;
 
@@ -362,7 +363,7 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Master’s thesis</p>
+                    <p className="project-overline">{overline}</p>
 
                     <h3 className="project-title">
                       <a href={projectUrl}>{title}</a>
@@ -383,7 +384,7 @@ const Featured = () => {
 
                     <div className="project-links">
                       {cta && (
-                        <a href={cta} aria-label="Course Link" className="cta">
+                        <a href={cta} aria-label="More about this work" className="cta">
                           Learn More
                         </a>
                       )}
