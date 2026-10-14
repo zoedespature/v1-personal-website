@@ -16,14 +16,6 @@ const StyledProjectsSection = styled.section`
     font-size: clamp(24px, 5vw, var(--fz-heading));
   }
 
-  .archive-link {
-    font-family: var(--font-mono);
-    font-size: var(--fz-sm);
-    &:after {
-      bottom: 0.1em;
-    }
-  }
-
   .projects-grid {
     ${({ theme }) => theme.mixins.resetList};
     display: grid;
@@ -192,7 +184,6 @@ const Projects = () => {
 
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
-  const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -202,14 +193,12 @@ const Projects = () => {
     }
 
     sr.reveal(revealTitle.current, srConfig());
-    sr.reveal(revealArchiveLink.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-  }, []);
+  }, [prefersReducedMotion]);
 
   const GRID_LIMIT = 3;
   const projects = data.projects.edges.filter(({ node }) => node);
-  const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  const projectsToShow = showMore ? projects : projects.slice(0, GRID_LIMIT);
 
   const projectInner = node => {
     const { frontmatter, html } = node;
@@ -266,11 +255,6 @@ const Projects = () => {
   return (
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Personal & Professional Projects</h2>
-
-      {/* Add again if you want to add an archive */}
-      {/* <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
-      </Link> */}
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (
