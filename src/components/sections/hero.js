@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
@@ -49,24 +49,28 @@ const StyledHeroSection = styled.section`
 `;
 
 const shuffleArray = array => {
-  for (let i = array.length - 1; i > 0; i--) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return array;
+  return shuffled;
 };
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  const seq = [];
-  for (const greeting of shuffleArray(translations)) {
-    seq.push(`✨❯ ${greeting.flag} 👋 ${greeting.text}`);
-    seq.push(1000);
-    seq.push(`✨❯`);
-    seq.push(1000);
-  }
+  const seq = useMemo(
+    () =>
+      shuffleArray(translations).flatMap(greeting => [
+        `✨❯ ${greeting.flag} 👋 ${greeting.text}`,
+        1000,
+        `✨❯`,
+        1000,
+      ]),
+    [],
+  );
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -75,7 +79,7 @@ const Hero = () => {
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [prefersReducedMotion]);
 
   const one = <TypeAnimation cursor={true} sequence={seq} wrapper="h1" repeat={Infinity} />;
   const two = <h2 className="big-heading">Zoë Despature</h2>;

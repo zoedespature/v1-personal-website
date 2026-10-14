@@ -343,7 +343,7 @@ const Featured = () => {
 
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <section id="projects">
@@ -373,7 +373,7 @@ const Featured = () => {
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
 
-                    {tech.length && (
+                    {tech?.length > 0 && (
                       <ul className="project-tech-list">
                         {tech.map((tech, i) => (
                           <li key={i}>{tech}</li>

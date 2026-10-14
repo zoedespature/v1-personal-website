@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
-    props.scrollDirection === 'up' &&
+      props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -43,7 +43,7 @@ const StyledHeader = styled.header`
       `};
 
     ${props =>
-    props.scrollDirection === 'down' &&
+      props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -152,7 +152,7 @@ const StyledLinks = styled.div`
 
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
-  const scrollDirection = useScrollDirection('down');
+  const scrollDirection = useScrollDirection({ initialDirection: 'down' });
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -175,7 +175,7 @@ const Nav = ({ isHome }) => {
       clearTimeout(timeout);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   const timeout = isHome ? loaderDelay : 0;
   const fadeClass = isHome ? 'fade' : '';

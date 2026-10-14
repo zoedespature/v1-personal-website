@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import anime from 'animejs';
 import { IconLoader } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins } from '@styles';
+import { mixins } from '@styles';
 
 const LoaderContainer = styled.div`
   ${mixins.flexCenter};
@@ -21,7 +21,7 @@ const LoaderContainer = styled.div`
 const LogoWrapper = styled.div`
   width: max-content;
   max-width: 100px;
-  transition: ${theme.transition};
+  transition: var(--transition);
   opacity: ${props => (props.isMounted ? 1 : 0)};
   svg {
     width: 100%;

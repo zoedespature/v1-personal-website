@@ -200,7 +200,7 @@ const Jobs = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
-  }, []);
+  }, [prefersReducedMotion]);
 
   const focusTab = () => {
     if (tabs.current[tabFocus]) {
