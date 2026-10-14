@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
-import { usePrefersReducedMotion } from '@hooks';
+import { useIsLoading, usePrefersReducedMotion } from '@hooks';
 import TypeAnimation from 'react-type-animation';
 import { translations } from '@config';
 
@@ -59,6 +59,7 @@ const shuffleArray = array => {
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const isLoading = useIsLoading();
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const seq = useMemo(
@@ -73,13 +74,13 @@ const Hero = () => {
   );
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isLoading) {
       return;
     }
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
-  }, [prefersReducedMotion]);
+  }, [isLoading, prefersReducedMotion]);
 
   const one = <TypeAnimation cursor={true} sequence={seq} wrapper="h1" repeat={Infinity} />;
   const two = <h2 className="big-heading">Zoë Despature</h2>;

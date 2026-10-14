@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Helmet from 'react-helmet';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import { IconLoader } from '@components/icons';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { mixins } from '@styles';
+
+// The page renders underneath the loader, so scrolling has to be locked while
+// it is on screen. This is a global style rather than a Helmet body class
+// because Menu also drives the body class, and the two would race.
+const ScrollLock = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 const LoaderContainer = styled.div`
   ${mixins.flexCenter};
@@ -41,27 +49,40 @@ const LogoWrapper = styled.div`
 `;
 
 const Loader = ({ finishLoading }) => {
-  const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
+  const containerRef = useRef(null);
+  const logoRef = useRef(null);
 
-    loader
+  // Targets are scoped to this subtree rather than selected globally: the nav
+  // renders its own logo at the same time, and '#logo path' would animate that
+  // one away too.
+  const animate = () => {
+    const logo = logoRef.current && logoRef.current.querySelector('#loader-logo');
+
+    // Without this the loader would cover the page forever. The content now
+    // renders underneath, so skipping straight to the finished state just
+    // shows the page.
+    if (!logo) {
+      finishLoading();
+      return;
+    }
+
+    anime
+      .timeline({ complete: () => finishLoading() })
       .add({
-        targets: '#logo #underscore',
+        targets: logo.querySelector('#underscore'),
         duration: 400,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
       .add({
-        targets: '#logo path',
+        targets: logo.querySelectorAll('path'),
         delay: 200,
         duration: 1000,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
-        targets: '#logo',
+        targets: logo,
         delay: 700,
         duration: 300,
         easing: 'easeInOutQuart',
@@ -69,7 +90,7 @@ const Loader = ({ finishLoading }) => {
         scale: 0.1,
       })
       .add({
-        targets: '.loader',
+        targets: containerRef.current,
         duration: 20,
         easing: 'easeInOutQuart',
         opacity: 0,
@@ -86,10 +107,10 @@ const Loader = ({ finishLoading }) => {
   }, []);
 
   return (
-    <LoaderContainer className="loader">
-      <Helmet bodyAttributes={{ class: `hidden` }} />
+    <LoaderContainer className="loader" ref={containerRef}>
+      <ScrollLock />
 
-      <LogoWrapper isMounted={isMounted}>
+      <LogoWrapper isMounted={isMounted} ref={logoRef}>
         <IconLoader />
       </LogoWrapper>
     </LoaderContainer>

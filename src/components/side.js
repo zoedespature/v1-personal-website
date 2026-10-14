@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { loaderDelay } from '@utils';
-import { usePrefersReducedMotion } from '@hooks';
+import { useIsLoading, usePrefersReducedMotion } from '@hooks';
 
 const StyledSideElement = styled.div`
   width: 40px;
@@ -26,15 +26,16 @@ const StyledSideElement = styled.div`
 
 const Side = ({ children, isHome, orientation }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
+  const isLoading = useIsLoading();
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (!isHome || prefersReducedMotion) {
+    if (!isHome || prefersReducedMotion || isLoading) {
       return;
     }
     const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
     return () => clearTimeout(timeout);
-  }, [isHome, prefersReducedMotion]);
+  }, [isHome, isLoading, prefersReducedMotion]);
 
   return (
     <StyledSideElement orientation={orientation}>
