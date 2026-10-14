@@ -16,22 +16,24 @@ This website has been forked from [Brittany Chiang's](https://github.com/bchiang
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+This project uses **Yarn**. `yarn.lock` is the committed lockfile, so please don't install with npm — it would create a second, conflicting lockfile.
+
+1. Use the Node version this project is pinned to (see `.nvmrc`)
 
    ```sh
-   npm install -g gatsby-cli
+   nvm use
    ```
 
 2. Install dependencies
 
    ```sh
-   npm install
+   yarn install
    ```
 
 3. Start the development server
 
    ```sh
-   gatsby develop
+   yarn develop
    ```
 
 ## 🚀 Building and Running for Production
@@ -39,24 +41,52 @@ This website has been forked from [Brittany Chiang's](https://github.com/bchiang
 1. Generate a full static production build
 
    ```sh
-   npm run build
+   yarn build
    ```
 
-1. Preview the site as it will appear once deployed
+2. Preview the site as it will appear once deployed
 
    ```sh
-   npm run serve
+   yarn serve
    ```
+
+If a build behaves strangely, clear Gatsby's caches first with `yarn clean`.
+
+## 🚢 Deployment
+
+Netlify builds from `netlify.toml`, which pins the build command (`yarn build`), the publish directory (`public`), and the Node version. Those settings override anything configured in the Netlify UI, so change them here rather than there.
+
+## ✍️ Editing the content
+
+All site copy lives in markdown under `content/`, so most updates don't require touching any components:
+
+| Directory           | Renders in                               | Notes                                                                                                                                   |
+| ------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `content/jobs/`     | The "Where I've Worked" tabs             | Sorted by `date` descending, newest tab first                                                                                           |
+| `content/featured/` | "Some Things I'm Proud Of"               | Sorted by `date` ascending. `date` is a plain ordering number (`'1'`, `'2'`, `'3'`), not a real date                                    |
+| `content/projects/` | "Other Personal & Professional Projects" | Only entries with `showInProjects: true` are rendered. `date` is used purely to hand-order the grid, which is why the years read `2000` |
+
+Paths in frontmatter behave differently depending on where the file lives. Covers are relative to the markdown file (`cover: './demo.png'`), while links to anything in `static/` must be absolute (`cta: '/masters_thesis_zoedespature.pdf'`) so they resolve from any page.
+
+## 🧹 Code style
+
+Prettier owns all formatting and ESLint owns correctness — `.eslintrc` extends `prettier` last so the two don't fight over indentation. A husky pre-commit hook runs both over staged files. To format everything manually:
+
+```sh
+yarn format
+```
 
 ## 🎨 Color Reference
 
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#F9F5F4](https://via.placeholder.com/10/F9F5F4?text=+) `#F9F5F4` |
-| Light Navy     | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) `#FFFFFF` |
-| Lightest Navy  | ![#D4A9AB](https://via.placeholder.com/10/D4A9AB?text=+) `#D4A9AB` |
-| Slate          | ![#BF8084](https://via.placeholder.com/10/BF8084?text=+) `#BF8084` |
-| Light Slate    | ![#1A1618](https://via.placeholder.com/10/1A1618?text=+) `#1A1618` |
-| Lightest Slate | ![#1A1618](https://via.placeholder.com/10/1A1618?text=+) `#1A1618` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#8C353B](https://via.placeholder.com/10/8C353B?text=+) `#8C353B` |
+The CSS variable names in `src/styles/variables.js` are inherited from the original dark navy theme and no longer describe the colors they hold — `--navy` is an off-white, and `--lightest-slate` is nearly black.
+
+| Variable           | Hex                                                                |
+| ------------------ | ------------------------------------------------------------------ |
+| `--navy`           | ![#F9F5F4](https://placehold.co/15x15/F9F5F4/F9F5F4.png) `#F9F5F4` |
+| `--light-navy`     | ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF` |
+| `--lightest-navy`  | ![#D4A9AB](https://placehold.co/15x15/D4A9AB/D4A9AB.png) `#D4A9AB` |
+| `--slate`          | ![#BF8084](https://placehold.co/15x15/BF8084/BF8084.png) `#BF8084` |
+| `--light-slate`    | ![#1A1618](https://placehold.co/15x15/1A1618/1A1618.png) `#1A1618` |
+| `--lightest-slate` | ![#1A1618](https://placehold.co/15x15/1A1618/1A1618.png) `#1A1618` |
+| `--white`          | ![#e6f1ff](https://placehold.co/15x15/e6f1ff/e6f1ff.png) `#e6f1ff` |
+| `--green`          | ![#8C353B](https://placehold.co/15x15/8C353B/8C353B.png) `#8C353B` |

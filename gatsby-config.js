@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Zoë Despature',
     description:
-      'Hi! My name is Zoë Despature, I\'m a biomedical engineer from Imperial College London driven by a simple goal: use technology to make people\'s lives better. With a background in software development, I\'m focused on engineering a brighter, more compassionate future for all.',
+      "Hi! My name is Zoë Despature, I'm a biomedical engineer from Imperial College London driven by a simple goal: use technology to make people's lives better. With a background in software development, I'm focused on engineering a brighter, more compassionate future for all.",
     siteUrl: 'https://zoedespature.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@zoedespature',
@@ -71,7 +71,6 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
             },
           },
           {
