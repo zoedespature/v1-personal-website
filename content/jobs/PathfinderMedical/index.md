@@ -7,6 +7,6 @@ range: 'July 2019 - September 2019'
 url: 'https://www.pathfindermed.com/'
 ---
 
-- Participated in the development of novel electronic system which creates vascular access for dialysis patients
-- Programmed micro-controller for digital processing of biomedical signals, and developed instrumentation for electrode data collection and processing
-- Pitched projects and results to investors and clients. Successfully conducted project presentation for next stage of prototype development
+- Helped develop a novel electronic system that creates vascular access for dialysis patients
+- Programmed microcontrollers for digital processing of biomedical signals and built the instrumentation for electrode data collection
+- Pitched results to investors and clients, securing sign-off for the next stage of prototype development

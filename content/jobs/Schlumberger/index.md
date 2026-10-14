@@ -5,6 +5,7 @@ company: 'Schlumberger'
 location: 'Oxford, UK'
 range: 'July 2021 - September 2021'
 url: 'https://www.slb.com/'
+showInTabs: false
 ---
 
 - Worked on the backend layer written in Golang hosted in Docker containers on the Google Cloud Container Engine (GKE), and using cloud native functionality

@@ -1,8 +1,9 @@
 ---
-date: '2000-12-31'
+# TODO: confirm the year - this is a best guess from the course timing
+date: '2021-03-01'
 title: 'Decoding a Monkey’s Motor Cortical Activity'
 github: 'https://github.com/zoedespature/BMI'
-external: 'https://github.com/zoedespature/BMI'
+external: ''
 tech:
   - MATLAB
   - Kalman Filter
@@ -10,4 +11,4 @@ company: 'Imperial College London'
 showInProjects: true
 ---
 
-In [Professor Claudia Clopath's](https://en.wikipedia.org/wiki/Claudia_Clopath) class, my group and I analyzed neural spike train data to decode a monkey's motor cortex activity. We classified the arm movement angle using Linear Discriminant Analysis and decoded the trajectory with a Kalman filter.
+Analysed neural spike train data to decode motor cortex activity, classifying arm movement angle with Linear Discriminant Analysis and reconstructing the trajectory with a Kalman filter. Coursework in [Professor Claudia Clopath's](https://en.wikipedia.org/wiki/Claudia_Clopath) group.

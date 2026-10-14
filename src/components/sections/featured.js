@@ -345,9 +345,9 @@ const Featured = () => {
   }, [prefersReducedMotion]);
 
   return (
-    <section id="projects">
+    <section id="research">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’m Proud Of
+        Research
       </h2>
 
       <StyledProjectsGrid>
@@ -362,7 +362,7 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">Master’s thesis</p>
 
                     <h3 className="project-title">
                       <a href={projectUrl}>{title}</a>

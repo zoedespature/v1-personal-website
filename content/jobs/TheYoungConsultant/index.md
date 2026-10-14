@@ -5,6 +5,7 @@ company: 'The Young Consultant'
 location: 'London, UK'
 range: 'February 2020 - November 2020'
 url: 'https://www.linkedin.com/company/the-young-consultant/'
+showInTabs: false
 ---
 
 - Organised and assisted BCG & McKinsey case study event

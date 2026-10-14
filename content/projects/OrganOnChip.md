@@ -1,13 +1,14 @@
 ---
-date: '2000-12-29'
+# TODO: confirm the year - this is a best guess
+date: '2020-06-01'
 title: 'Organ-on-Chip for Ovarian Cancer Drug Administration'
 github: ''
 external: 'https://www.fightforsight.org.uk/our-research/glaucoma/organ-on-a-chip-a-lab-the-size-of-a-matchbox-to-develop-new-glaucoma-treatment/'
 tech:
   - CAD
   - FEA
-company: 'Imperial'
+company: 'Imperial College London'
 showInProjects: true
 ---
 
-In Prof. Dr. Darryl Overby's lab, we worked on improving the viability of biopsy-sized tissue cultured ex vivo. This new approach to drug administration would allow for a "top-down" approach for personalised medicine in ovarian cancer.
+Work in Prof. Dr. Darryl Overby's lab on keeping biopsy-sized tissue viable when cultured ex vivo, enabling a top-down approach to personalised drug administration in ovarian cancer.

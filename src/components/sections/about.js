@@ -125,64 +125,57 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, [prefersReducedMotion]);
 
-  const skills = [
-    'French 👌',
-    'German 👍',
-    'English 👌',
-    'Italian 🤌',
-    'Swiss German 👌',
-    'Dutch 🤏',
-  ];
+  const languages = ['French', 'English', 'German', 'Swiss German', 'Italian', 'Dutch'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+      <h2 className="numbered-heading">About</h2>
 
       <div className="inner">
         <StyledText>
           <div>
             <p>
-              Hello! My name is Zoë and I enjoy connecting with people just as much as I love tech.
-              My interest in development started when I was 13 and my mom needed a website for her
-              cooking class business. I was also a big fan of Grey's Anatomy (no comment) - what's a
-              better combination of these subjects than &#10024;biotech&#10024;?
+              I am an R&amp;D engineer at{' '}
+              <a href="https://www.csem.ch/en/" target="_blank" rel="noreferrer">
+                CSEM
+              </a>{' '}
+              in Bern, working on software and systems for medical devices. I trained as a
+              biomedical engineer at{' '}
+              <a href="https://www.imperial.ac.uk/" target="_blank" rel="noreferrer">
+                Imperial College London
+              </a>
+              , and I am interested in the stretch between a device, the data it produces, and the
+              people who have to use both.
             </p>
 
             <p>
-              A bit about myself: <br></br>
-              🇫🇷 &emsp; I was born in Bar-le-Duc, France <br></br>
-              🇸🇬 &emsp; I grew up in Singapore <br></br>
-              🇬🇧 &emsp; I studied in London, UK <br></br>
-              🇳🇱 &emsp; I worked in Amsterdam, The Netherlands <br></br>
-              🇨🇭 &emsp; Currently based in Bern, Switzerland <br></br>
-            </p>
-
-            {/* <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://www.pathfindermed.com/">a biotech start-up</a>,{' '}
-              <a href="https://developmental-biomechanics.org/">a university lab</a>,{' '}
-              <a href="https://www.slb.com/">a huge corporation</a>, and{' '}
-              <a href="https://www.virtualimperial.com/">a student-led Minecraft project</a>. My
-              main focus these days is bringing the wide set of skills I gathered throughout these
-              experiences to change the way we manage in biotech.
+              Alongside engineering I founded [Company], an investment company focused on [what it
+              backs]. The idea is simple: [one sentence on the thesis]. More at [company website].
             </p>
 
             <p>
-              I recently completed the{' '}
-              <a href="https://irdeto.com/graduate-program/">Irdeto Graduate Program</a> in Software
-              Engineering &amp; Cyber-Security, where I got to experience being a software engineer
-              and a project manager in important company-wide projects.
-            </p> */}
+              🇫🇷 &emsp; Born in Bar-le-Duc, France
+              <br />
+              🇸🇬 &emsp; Grew up in Singapore
+              <br />
+              🇬🇧 &emsp; Studied in London
+              <br />
+              🇳🇱 &emsp; Worked in Amsterdam
+              <br />
+              🇨🇭 &emsp; Now in Bern
+            </p>
 
-            <p>I speak:</p>
+            <p>Languages</p>
           </div>
 
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {languages.map((language, i) => (
+              <li key={i}>{language}</li>
+            ))}
           </ul>
           <p>
-            <br></br>If I'm not behind my computer, I'm most likely running, cycling, playing the
-            piano or making sourdough bread.
+            <br />
+            Outside of work I run, cycle, play the piano, and bake sourdough.
           </p>
         </StyledText>
 

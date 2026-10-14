@@ -7,6 +7,6 @@ range: 'October 2019 - March 2021'
 url: 'https://developmental-biomechanics.org/'
 ---
 
-- Image segmentation of mouse embryo bone scans to study of fetal bone deformation under dynamic mechanical loading
-- Assisted postdoc researcher in the publication of a scientific paper in the field of developmental biomechanics [[link]](https://www.ecmjournal.org/papers/vol041/pdf/v041a34.pdf).
-- Assisted to optical projection tomography and wet-lab experiments within the research group
+- Segmented mouse embryo bone scans to study fetal bone deformation under dynamic mechanical loading
+- Contributed to a paper published in European Cells and Materials [[link]](https://www.ecmjournal.org/papers/vol041/pdf/v041a34.pdf)
+- Ran optical projection tomography and wet-lab experiments alongside the research group

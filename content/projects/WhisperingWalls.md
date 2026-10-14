@@ -1,13 +1,13 @@
 ---
-date: '2000-12-30'
+date: '2020-11-01'
 title: 'Whispering Walls'
 github: 'https://github.com/smokyJ07/hh2020'
 external: 'https://devpost.com/software/whisperingwalls'
 tech:
   - Python
   - Raspberry Pi
-company: 'Imperial College London'
-showInProjects: true
+company: 'Hackathon'
+showInProjects: false
 ---
 
-A Hackathon project designed to make public places accessible to visually impaired individuals. We used conductive tape and QR codes to provide information to users via a modified cane, offering haptic and auditory feedback.
+Making public spaces navigable for visually impaired people, using conductive tape and QR codes read by a modified cane that returns haptic and auditory feedback.

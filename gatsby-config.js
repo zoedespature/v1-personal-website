@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Zoë Despature',
     description:
-      "Hi! My name is Zoë Despature, I'm a biomedical engineer from Imperial College London driven by a simple goal: use technology to make people's lives better. With a background in software development, I'm focused on engineering a brighter, more compassionate future for all.",
+      'Zoë Despature is an R&D engineer working on software and systems for medical devices. Biomedical engineer from Imperial College London, currently at CSEM in Bern.',
     siteUrl: 'https://zoedespature.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@zoedespature',

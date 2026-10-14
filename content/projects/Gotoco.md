@@ -1,10 +1,13 @@
 ---
-date: '2000-12-24'
-title: 'Volunteering in China'
+# TODO: confirm the year - this is a best guess
+date: '2018-08-01'
+title: 'Teaching English in China'
 github: ''
 external: 'https://www.go-to.co/'
+tech:
+  - TEFL
 company: 'GoToCo'
-showInProjects: true
+showInProjects: false
 ---
 
-An exciting volunteering experience in Dongguan, Guangzhou, where I taught English to Chinese children and acquired my [TEFL degree](https://www.teflcourse.net/tefl-certification/?c=a4&g=3&gad=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEu2MTWCuACnLh5a0JWr9Tvzp9g48QKyl3CEOWfRwxiDCUC7ZaGXGtBoCo2sQAvD_BwE).
+Taught English to children in Dongguan, Guangzhou, and earned a [TEFL certification](https://www.teflcourse.net/tefl-certification/) along the way.
