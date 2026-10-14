@@ -203,6 +203,9 @@ const Projects = () => {
   const projectInner = node => {
     const { frontmatter, html } = node;
     const { github, external, title, tech } = frontmatter;
+    // Undefined rather than '' so React omits href entirely; an empty href
+    // would make the whole card a link that reloads the page.
+    const projectUrl = external || github || undefined;
 
     return (
       <div className="project-inner">
@@ -231,7 +234,7 @@ const Projects = () => {
           </div>
 
           <h3 className="project-title">
-            <a href={external} target="_blank" rel="noreferrer">
+            <a href={projectUrl} target="_blank" rel="noreferrer">
               {title}
             </a>
           </h3>
