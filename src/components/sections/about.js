@@ -149,8 +149,12 @@ const About = () => {
             </p>
 
             <p>
-              Alongside engineering I founded [Company], an investment company focused on [what it
-              backs]. The idea is simple: [one sentence on the thesis]. More at [company website].
+              When I take the engineer hat off, I look at companies. I founded{' '}
+              <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
+                La Barisienne
+              </a>
+              , a European investment vehicle with a European focus in biotech, photonics and
+              robotics — mostly, what is interesting in Switzerland and nearby.
             </p>
 
             <p>

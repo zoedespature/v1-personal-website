@@ -3,7 +3,7 @@ date: '2024-02-01'
 title: 'SwissFever'
 cover: './cover.jpg'
 overline: 'With Inselspital'
-cta: 'https://www.swiss-medtech.ch/sites/default/files/2026-06/Presentation_Brack%2BDespature.pdf'
+cta: 'https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/'
 tech:
   - IoMT
   - BLE
@@ -11,7 +11,7 @@ tech:
   - React
 ---
 
-A study with the paediatric oncology team at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring in children with cancer, so infection can be caught outside the ward as well as in it.
+A study with the paediatric oncology team at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring in children with cancer, so infection can be caught outside the ward as well as in it. CSEM wrote it up in the [2024 annual report](https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/).
 
 CSEM built the path from wearable to cloud, including the interface clinicians use. The questions the study is actually for sit with the clinicians: does reacting to fever faster change how harshly we have to treat, and can patterns in the data show an infection before the usual signs.
 
