@@ -11,8 +11,8 @@ tech:
   - React
 ---
 
-A study with the paediatric oncology team at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring in children with cancer, so infection can be caught outside the ward as well as in it. CSEM wrote it up in the [2024 annual report](https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/).
+A study with the paediatric oncology team at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring in children with cancer, so an infection can be noticed at home as well as on the ward. CSEM wrote it up in the [2024 annual report](https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/).
 
-CSEM built the path from wearable to cloud, including the interface clinicians use. The questions the study is actually for sit with the clinicians: does reacting to fever faster change how harshly we have to treat, and can patterns in the data show an infection before the usual signs.
+Together we built the path from wearable to cloud, including the interface the clinicians use. The study asks whether reacting to fever earlier can lighten treatment, and whether the data can show an infection before the usual signs appear.
 
-The study is running. First patients were enrolled in late 2024. We are still collecting; results are some way off.
+The first patients joined in late 2024. We are still collecting, and the results will take time.

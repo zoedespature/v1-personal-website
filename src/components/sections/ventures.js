@@ -38,19 +38,18 @@ const Ventures = () => {
         <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
           La Barisienne
         </a>
-        . It is a European investment vehicle, currently being set up, for pre-seed deep-tech in
-        Europe: photonics, biosensing, robotics, medtech. Most of what I look at is in Switzerland
-        and nearby.
+        , a European investment vehicle we are setting up for pre-seed deep-tech: photonics,
+        biosensing, robotics, medtech. Most of what I look at is in Switzerland and nearby.
       </p>
 
       <p>
-        I spend my days building medical devices. That is the point. We read the science before the
-        deck.
+        I still spend my days building medical devices, and that is what I want to bring to this
+        side of the table: enough technical curiosity to sit with the science, not only the pitch.
       </p>
 
       <p>
-        If you are building something hard, raising a first round, or want a technical look at a
-        file, I would like to hear from you.
+        If you are building something difficult, raising a first round, or would like a technical
+        conversation about a company, I would be glad to talk.
       </p>
 
       <a className="site-link" href="https://labarisienne.ch" target="_blank" rel="noreferrer">

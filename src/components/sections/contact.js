@@ -60,7 +60,7 @@ const Contact = () => {
       <h2 className="title">Get in touch</h2>
 
       <p>
-        For a collaboration, a talk, or a question about something here, write to me. I read
+        If you would like to collaborate, invite a talk, or just say hello, write to me. I read
         everything that arrives.
       </p>
 
