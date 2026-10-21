@@ -16,7 +16,7 @@ This website has been forked from [Brittany Chiang's](https://github.com/bchiang
 
 ## 🛠 Installation & Set Up
 
-This project uses **Yarn**. `yarn.lock` is the committed lockfile, so please don't install with npm — it would create a second, conflicting lockfile.
+This project uses **Yarn**. `yarn.lock` is the committed lockfile, so please don't install with npm. It would create a second, conflicting lockfile.
 
 1. Use the Node version this project is pinned to (see `.nvmrc`)
 
@@ -63,15 +63,15 @@ All site copy lives in markdown under `content/`, so most updates don't require 
 | Directory           | Renders in            | Notes                                                                                                           |
 | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `content/jobs/`     | Experience tabs       | Sorted by `date` descending. Set `showInTabs: false` to keep a role in the repo without showing it              |
-| `content/talks/`    | Talks list            | Sorted by `date` descending. Title, event, location, optional `url`                                             |
+| `content/talks/`    | Selected earlier work | Folded into the same list as projects. Title, event, location, optional `url`                                   |
 | `content/featured/` | Selected work         | Larger write-ups with a cover image, sorted by `date` descending. `overline` is the small label above the title |
-| `content/projects/` | Selected earlier work | Only entries with `showInProjects: true`. A compact list, not cards                                             |
+| `content/projects/` | Selected earlier work | Only entries with `showInProjects: true`. A compact list, mixed with talks                                      |
 
 Paths in frontmatter behave differently depending on where the file lives. Covers are relative to the markdown file (`cover: './demo.png'`), while links to anything in `static/` must be absolute (`cta: '/masters_thesis_zoedespature.pdf'`) so they resolve from any page.
 
 ## 🧹 Code style
 
-Prettier owns all formatting and ESLint owns correctness — `.eslintrc` extends `prettier` last so the two don't fight over indentation. A husky pre-commit hook runs both over staged files. To format everything manually:
+Prettier owns all formatting and ESLint owns correctness. `.eslintrc` extends `prettier` last so the two don't fight over indentation. A husky pre-commit hook runs both over staged files. To format everything manually:
 
 ```sh
 yarn format
@@ -79,7 +79,7 @@ yarn format
 
 ## 🎨 Color Reference
 
-Most CSS variable names in `src/styles/variables.js` are inherited from the original dark navy theme and no longer describe the colors they hold — `--navy` is an off-white, and `--lightest-slate` is nearly black. `--ink` is the one that has been renamed to match this palette; it was `--white` (`#e6f1ff`), a pale blue that was illegible everywhere it was used.
+Most CSS variable names in `src/styles/variables.js` are inherited from the original dark navy theme and no longer describe the colors they hold: `--navy` is an off-white, and `--lightest-slate` is nearly black. `--ink` is the one that has been renamed to match this palette; it was `--white` (`#e6f1ff`), a pale blue that was illegible everywhere it was used.
 
 One leftover is deliberate: `--green-tint` is still the original teal, and tints the featured project images.
 

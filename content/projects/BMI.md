@@ -8,7 +8,7 @@ tech:
   - MATLAB
   - Kalman Filter
 company: 'Imperial College London'
-showInProjects: true
+showInProjects: false
 ---
 
 Analysed neural spike train data to decode motor cortex activity, classifying arm movement angle with Linear Discriminant Analysis and reconstructing the trajectory with a Kalman filter. Coursework in [Professor Claudia Clopath's](https://en.wikipedia.org/wiki/Claudia_Clopath) group.

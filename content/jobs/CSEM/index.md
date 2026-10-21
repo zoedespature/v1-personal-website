@@ -3,7 +3,7 @@ date: '2024-03-17'
 title: 'R&D Engineer Full-Stack'
 company: 'CSEM'
 location: 'Bern, Switzerland'
-range: 'February 2024 – present'
+range: 'February 2024 - present'
 url: 'https://www.csem.ch/en/'
 ---
 

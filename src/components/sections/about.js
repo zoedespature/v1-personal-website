@@ -149,15 +149,6 @@ const About = () => {
             </p>
 
             <p>
-              When I take the engineer hat off, I look at companies. I founded{' '}
-              <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
-                La Barisienne
-              </a>
-              , a European investment vehicle with a European focus in biotech, photonics and
-              robotics — mostly, what is interesting in Switzerland and nearby.
-            </p>
-
-            <p>
               🇫🇷 &emsp; Born in Bar-le-Duc, France
               <br />
               🇸🇬 &emsp; Grew up in Singapore

@@ -108,10 +108,51 @@ const Projects = () => {
           }
         }
       }
+      talks: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/talks/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              event
+              location
+              url
+            }
+          }
+        }
+      }
     }
   `);
 
-  const notes = data.projects.edges;
+  const projectNotes = data.projects.edges.map(({ node }) => {
+    const { date, title, github, external } = node.frontmatter;
+    return {
+      date,
+      title,
+      github,
+      external,
+      html: node.html,
+    };
+  });
+
+  const talkNotes = data.talks.edges.map(({ node }) => {
+    const { date, title, event, location, url } = node.frontmatter;
+    const meta = [event, location].filter(Boolean).join(', ');
+    return {
+      date,
+      title,
+      github: '',
+      external: url || '',
+      html: meta ? `<p>${meta}</p>` : '',
+    };
+  });
+
+  const notes = [...projectNotes, ...talkNotes].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -131,8 +172,8 @@ const Projects = () => {
     <StyledNotesSection ref={revealContainer}>
       <h3>Selected earlier work</h3>
       <StyledList>
-        {notes.map(({ node }, i) => {
-          const { date, title, github, external } = node.frontmatter;
+        {notes.map((note, i) => {
+          const { date, title, github, external, html } = note;
           const year = date ? new Date(date).getFullYear() : '';
           const url = external || github;
 
@@ -149,7 +190,7 @@ const Projects = () => {
                     title
                   )}
                 </h4>
-                <div className="description" dangerouslySetInnerHTML={{ __html: node.html }} />
+                {html && <div className="description" dangerouslySetInnerHTML={{ __html: html }} />}
               </div>
               <div className="links">
                 {github && (
