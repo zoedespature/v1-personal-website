@@ -7,6 +7,7 @@ range: 'February 2024 - present'
 url: 'https://www.csem.ch/en/'
 ---
 
-- Full-stack software for devices used in clinical settings, from the data coming off the hardware through to the cloud
-- Main clinical collaboration is SwissFever, with paediatric oncology at Inselspital
-- Designing and running the trial environment on AWS
+- Building the digital layer around clinical sensing: connected devices, secure cloud, APIs and clinician-facing interfaces (X-Data on AWS)
+- SwissFever with paediatric oncology at Inselspital: remote monitoring that clinicians use day to day
+- Exploring trustworthy GenAI for healthcare, with a focus on uncertainty-aware LLMs, grounded extraction and human-in-the-loop validation
+- Turning that research into collaborations, including an industry-sponsored Bioengineering project with Imperial College London on agentic AI under uncertainty

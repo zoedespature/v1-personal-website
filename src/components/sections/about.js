@@ -19,6 +19,27 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  .places,
+  .skills-list {
+    font-family: var(--font-mono);
+  }
+
+  .places {
+    p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 8px;
+      font-size: var(--fz-md);
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+  }
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -32,8 +53,9 @@ const StyledText = styled.div`
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
-      font-family: var(--font-mono);
       font-size: var(--fz-md);
+      /* Hand emojis: Segoe UI Emoji covers Edge/Windows; Apple/Noto cover the rest */
+      font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', var(--font-mono);
 
       &:before {
         content: '▹';
@@ -125,7 +147,24 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, [prefersReducedMotion]);
 
-  const languages = ['French', 'English', 'German', 'Swiss German', 'Italian', 'Dutch'];
+  // Hand emojis render reliably on Edge/Windows via Segoe UI Emoji.
+  // Country flags do not (Windows shows letter codes), so places use Twemoji images.
+  const languages = [
+    'French 👌',
+    'English 👌',
+    'German 👍',
+    'Italian 🤌',
+    'Swiss German 👌',
+    'Dutch 🤏',
+  ];
+
+  const places = [
+    { code: '1f1eb-1f1f7', alt: 'France', text: 'Born in Bar-le-Duc, France' },
+    { code: '1f1f8-1f1ec', alt: 'Singapore', text: 'Grew up in Singapore' },
+    { code: '1f1ec-1f1e7', alt: 'United Kingdom', text: 'Studied in London' },
+    { code: '1f1f3-1f1f1', alt: 'Netherlands', text: 'Worked in Amsterdam' },
+    { code: '1f1e8-1f1ed', alt: 'Switzerland', text: 'Now in Bern' },
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -149,18 +188,30 @@ const About = () => {
             </p>
 
             <p>
-              🇫🇷 &emsp; Born in Bar-le-Duc, France
-              <br />
-              🇸🇬 &emsp; Grew up in Singapore
-              <br />
-              🇬🇧 &emsp; Studied in London
-              <br />
-              🇳🇱 &emsp; Worked in Amsterdam
-              <br />
-              🇨🇭 &emsp; Now in Bern
+              When I take the engineer hat off, I look at companies. I founded{' '}
+              <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
+                La Barisienne
+              </a>
+              , a European investment vehicle for pre-seed deep-tech in biotech, photonics and
+              robotics. More in <a href="#ventures">Ventures</a>.
             </p>
 
-            <p>Languages</p>
+            <div className="places">
+              {places.map(({ code, alt, text }) => (
+                <p key={code}>
+                  <img
+                    src={`https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/${code}.png`}
+                    alt={alt}
+                    width={18}
+                    height={18}
+                    loading="lazy"
+                  />
+                  {text}
+                </p>
+              ))}
+            </div>
+
+            <p>I speak:</p>
           </div>
 
           <ul className="skills-list">
@@ -170,7 +221,8 @@ const About = () => {
           </ul>
           <p>
             <br />
-            Outside of work I run, cycle, play the piano, and bake sourdough.
+            If I am not behind my computer, I am most likely running, cycling, playing the piano or
+            making sourdough bread.
           </p>
         </StyledText>
 
