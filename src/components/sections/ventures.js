@@ -10,11 +10,6 @@ const StyledVenturesSection = styled.section`
   p {
     max-width: 600px;
   }
-
-  .site-link {
-    ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 40px;
-  }
 `;
 
 const Ventures = () => {
@@ -53,10 +48,6 @@ const Ventures = () => {
         If you are building something hard, raising a first round, or would simply like to compare
         notes on a company, I would love to hear from you.
       </p>
-
-      <a className="site-link" href="https://labarisienne.ch" target="_blank" rel="noreferrer">
-        labarisienne.ch
-      </a>
     </StyledVenturesSection>
   );
 };

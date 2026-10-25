@@ -98,8 +98,18 @@ const Hero = () => {
       </p>
     </div>
   );
+  const five = (
+    <a
+      className="email-link"
+      href="https://www.linkedin.com/in/zoe-despature/"
+      target="_blank"
+      rel="noreferrer"
+      style={{ margin: '40px 0 0 0' }}>
+      Connect with me!
+    </a>
+  );
 
-  const items = [one, two, three, four];
+  const items = [one, two, three, four, five];
 
   return (
     <StyledHeroSection>

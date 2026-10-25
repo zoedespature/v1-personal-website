@@ -21,18 +21,27 @@ const StyledAboutSection = styled.section`
 const StyledText = styled.div`
   .places {
     margin: 0 0 15px;
+    line-height: 1.3;
 
     .place {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 8px;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0;
+      line-height: 1.3;
+
+      /* Override global p spacing so rows sit like the old <br> list */
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
 
     img {
-      width: 18px;
-      height: 18px;
+      width: 1em;
+      height: 1em;
       flex-shrink: 0;
+      position: relative;
+      top: 0.15em;
     }
   }
 
@@ -183,18 +192,18 @@ const About = () => {
             </p>
 
             <p>
-              When I take the engineer hat off, I look at companies. I founded{' '}
+              When I take the engineer hat off, I look at companies. My brother and I founded{' '}
               <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
                 La Barisienne
               </a>
               , a European investment vehicle for pre-seed deep-tech in biotech, photonics and
-              robotics. More in <a href="#ventures">Ventures</a>.
+              robotics.
             </p>
 
-            <p>A bit about myself:</p>
             <div className="places">
+              <p>A bit about myself:</p>
               {places.map(({ code, alt, text }) => (
-                <p className="place" key={code}>
+                <div className="place" key={code}>
                   <img
                     src={`https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/${code}.png`}
                     alt={alt}
@@ -203,7 +212,7 @@ const About = () => {
                     loading="lazy"
                   />
                   <span>{text}</span>
-                </p>
+                </div>
               ))}
             </div>
 
@@ -217,8 +226,8 @@ const About = () => {
           </ul>
           <p>
             <br />
-            If I am not behind my computer, I am most likely running, cycling, playing the piano or
-            making sourdough bread.
+            If I am not behind my computer, I am most likely running, playing the piano or making
+            sourdough bread.
           </p>
         </StyledText>
 
