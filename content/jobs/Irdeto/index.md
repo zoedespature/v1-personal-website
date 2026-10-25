@@ -9,10 +9,10 @@ url: 'https://irdeto.com/'
 
 #### Project Manager
 
-- Led the partner portal migration within a Salesforce CRM programme, delivered on time and 11% under budget, increasing data accuracy by 70%
-- Drove adoption of the new CRM across more than 100 stakeholders spanning several regions and departments
-- Owned delivery of ICSE (Irdeto Certified Secure Experience) end to end, from timelines and resourcing through to launch
+- Partner-portal migration inside a larger Salesforce CRM rollout: timelines, coordination across teams, and getting the thing live
+- Delivery of ICSE (Irdeto Certified Secure Experience), from planning through launch
 
 #### Associate Developer
 
-- Surfaced trends in historical CRM data that moved sales forecasting from qualitative estimates to a data-driven model
+- Android TV backend work, looking at which device metrics were available through the platform APIs
+- Worked with sales on historical CRM data; forecasting had been mostly qualitative, and the analysis fed into how the CRM was redesigned
