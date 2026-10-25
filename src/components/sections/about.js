@@ -19,6 +19,23 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  .places {
+    margin: 0 0 15px;
+
+    .place {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 8px;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+  }
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -135,6 +152,15 @@ const About = () => {
     'Dutch 🤏',
   ];
 
+  // Twemoji images so flags render on Edge/Windows; text stays on the site font.
+  const places = [
+    { code: '1f1eb-1f1f7', alt: 'France', text: 'I was born in Bar-le-Duc, France' },
+    { code: '1f1f8-1f1ec', alt: 'Singapore', text: 'I grew up in Singapore' },
+    { code: '1f1ec-1f1e7', alt: 'United Kingdom', text: 'I studied in London, UK' },
+    { code: '1f1f3-1f1f1', alt: 'Netherlands', text: 'I worked in Amsterdam, The Netherlands' },
+    { code: '1f1e8-1f1ed', alt: 'Switzerland', text: 'Currently based in Bern, Switzerland' },
+  ];
+
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About</h2>
@@ -165,19 +191,21 @@ const About = () => {
               robotics. More in <a href="#ventures">Ventures</a>.
             </p>
 
-            <p>
-              A bit about myself:
-              <br />
-              🇫🇷 &emsp; I was born in Bar-le-Duc, France
-              <br />
-              🇸🇬 &emsp; I grew up in Singapore
-              <br />
-              🇬🇧 &emsp; I studied in London, UK
-              <br />
-              🇳🇱 &emsp; I worked in Amsterdam, The Netherlands
-              <br />
-              🇨🇭 &emsp; Currently based in Bern, Switzerland
-            </p>
+            <p>A bit about myself:</p>
+            <div className="places">
+              {places.map(({ code, alt, text }) => (
+                <p className="place" key={code}>
+                  <img
+                    src={`https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/${code}.png`}
+                    alt={alt}
+                    width={18}
+                    height={18}
+                    loading="lazy"
+                  />
+                  <span>{text}</span>
+                </p>
+              ))}
+            </div>
 
             <p>I speak:</p>
           </div>

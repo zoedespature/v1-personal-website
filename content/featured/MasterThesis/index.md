@@ -5,11 +5,11 @@ cover: './image.png'
 overline: "Master's thesis"
 cta: '/masters_thesis_zoedespature.pdf'
 tech:
-  - MATLAB
-  - Simulink
-  - Regression
+  - EMG
+  - System identification
+  - Exoskeletons
 ---
 
-Master's thesis in [Prof. Dr. Dario Farina](https://scholar.google.com/citations?user=0JDIQ0wAAAAJ&hl=en)'s lab at Imperial College London, on wearable exoskeletons.
+My master's thesis in [Prof. Dr. Dario Farina](https://scholar.google.com/citations?user=0JDIQ0wAAAAJ&hl=en)'s lab at Imperial College London, on wearable exoskeletons.
 
-The work used EMG to estimate human joint torque, so the device could reduce impedance without taking control priority away from the user. The model captured previously unaccounted-for dynamics with up to 61.94% accuracy.
+I used EMG to estimate human joint torque so the device could feel less resistant while leaving control with the user. The model picked up dynamics that had been left out of earlier approaches, with up to 61.94% accuracy on those characteristics.

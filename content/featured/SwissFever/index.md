@@ -5,14 +5,14 @@ cover: './cover.jpg'
 overline: 'With Inselspital'
 cta: 'https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/'
 tech:
-  - IoMT
-  - BLE
-  - AWS
-  - React
+  - Remote patient monitoring
+  - Clinical interfaces
+  - Secure cloud
+  - Trial infrastructure
 ---
 
-A study with the paediatric oncology team at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring in children with cancer, so an infection can be noticed at home as well as on the ward. CSEM wrote it up in the [2024 annual report](https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/).
+I work with paediatric oncologists at [Inselspital](https://www.insel.ch/en/) on continuous fever and vital-sign monitoring for children with cancer. The idea is simple and ambitious: notice an infection earlier, including when a child is at home, and ask whether that can make treatment a little gentler.
 
-Together we built the path from wearable to cloud, including the interface the clinicians use. The study asks whether reacting to fever earlier can lighten treatment, and whether the data can show an infection before the usual signs appear.
+On our side we built the stack underneath that, from the wearables into a secure cloud and the interface clinicians use to follow their patients. CSEM wrote about the project in the [2024 annual report](https://www.csem.ch/en/annual-report/2024/pediatric-cancer-care/).
 
-The first patients joined in late 2024. We are still collecting, and the results will take time.
+The first patients joined in late 2024. We are still collecting, and I am looking forward to what we learn.

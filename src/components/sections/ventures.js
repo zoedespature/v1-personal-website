@@ -34,22 +34,24 @@ const Ventures = () => {
       <h2 className="numbered-heading">Ventures</h2>
 
       <p>
-        The other hat is{' '}
+        I also founded{' '}
         <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
           La Barisienne
         </a>
         , a European investment vehicle we are setting up for pre-seed deep-tech: photonics,
-        biosensing, robotics, medtech. Most of what I look at is in Switzerland and nearby.
+        biosensing, robotics and medtech. Most of the companies I look at are in Switzerland and
+        nearby.
       </p>
 
       <p>
-        I still spend my days building medical devices, and that is what I want to bring to this
-        side of the table: enough technical curiosity to sit with the science, not only the pitch.
+        What I enjoy most here is sitting with the science and the people building it, not only the
+        pitch. My day job is medical devices, and that curiosity is what I bring to this side of my
+        work.
       </p>
 
       <p>
-        If you are building something difficult, raising a first round, or would like a technical
-        conversation about a company, I would be glad to talk.
+        If you are building something hard, raising a first round, or would simply like to compare
+        notes on a company, I would love to hear from you.
       </p>
 
       <a className="site-link" href="https://labarisienne.ch" target="_blank" rel="noreferrer">
