@@ -29,12 +29,12 @@ const Ventures = () => {
       <h2 className="numbered-heading">Ventures</h2>
 
       <p>
-        I also founded{' '}
+        I founded{' '}
         <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
           La Barisienne
-        </a>
-        , a European investment vehicle we are setting up for pre-seed deep-tech: photonics,
-        biosensing, robotics and medtech. Most of the companies I look at are in Switzerland and
+        </a>{' '}
+        with my brother, a European investment vehicle for pre-seed/seed deep-tech: photonics,
+        biosensing, robotics and medtech. Most of the companies we look at are in Switzerland and
         nearby.
       </p>
 
@@ -45,8 +45,8 @@ const Ventures = () => {
       </p>
 
       <p>
-        If you are building something hard, raising a first round, or would simply like to compare
-        notes on a company, I would love to hear from you.
+        If you are building something, raising a first round, or would simply like to compare notes
+        on a company, I would love to hear from you !
       </p>
     </StyledVenturesSection>
   );

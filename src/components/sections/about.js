@@ -196,7 +196,7 @@ const About = () => {
               <a href="https://labarisienne.ch" target="_blank" rel="noreferrer">
                 La Barisienne
               </a>
-              , a European investment vehicle for pre-seed deep-tech in biotech, photonics and
+              , a European investment vehicle for pre-seed/seed deep-tech in biotech, photonics and
               robotics.
             </p>
 
