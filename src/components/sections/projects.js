@@ -25,7 +25,7 @@ const StyledList = styled.ul`
 
 const StyledNote = styled.li`
   display: grid;
-  grid-template-columns: 72px 1fr auto;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
   gap: 8px 20px;
   align-items: baseline;
   padding: 16px 0;
@@ -41,12 +41,17 @@ const StyledNote = styled.li`
     font-size: var(--fz-xs);
   }
 
+  .content {
+    min-width: 0;
+  }
+
   .title {
     margin: 0;
     color: var(--lightest-slate);
     font-size: var(--fz-lg);
     font-weight: 600;
     line-height: 1.3;
+    overflow-wrap: anywhere;
   }
 
   .description {
@@ -66,6 +71,7 @@ const StyledNote = styled.li`
   .links {
     display: flex;
     gap: 8px;
+    flex-shrink: 0;
 
     a {
       ${({ theme }) => theme.mixins.flexCenter};
@@ -81,8 +87,28 @@ const StyledNote = styled.li`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 56px 1fr auto;
-    gap: 6px 12px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 12px;
+
+    .year {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .links {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: start;
+    }
+
+    .content {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    .title {
+      font-size: var(--fz-md);
+    }
   }
 `;
 
@@ -180,7 +206,7 @@ const Projects = () => {
           return (
             <StyledNote key={i}>
               <span className="year">{year}</span>
-              <div>
+              <div className="content">
                 <h4 className="title">
                   {url ? (
                     <a href={url} target="_blank" rel="noreferrer">

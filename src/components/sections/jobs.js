@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
@@ -39,30 +39,15 @@ const StyledTabList = styled.div`
     padding-left: 50px;
     margin-left: -50px;
     margin-bottom: 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   @media (max-width: 480px) {
     width: calc(100% + 50px);
     padding-left: 25px;
     margin-left: -25px;
-  }
-
-  li {
-    &:first-of-type {
-      @media (max-width: 600px) {
-        margin-left: 50px;
-      }
-      @media (max-width: 480px) {
-        margin-left: 25px;
-      }
-    }
-    &:last-of-type {
-      @media (max-width: 600px) {
-        padding-right: 50px;
-      }
-      @media (max-width: 480px) {
-        padding-right: 25px;
-      }
-    }
   }
 `;
 
@@ -86,6 +71,7 @@ const StyledTabButton = styled.button`
   }
   @media (max-width: 600px) {
     ${({ theme }) => theme.mixins.flexCenter};
+    width: auto;
     padding: 0 15px;
     border-left: 0;
     border-bottom: 2px solid var(--lightest-navy);
@@ -107,21 +93,19 @@ const StyledHighlight = styled.div`
   height: var(--tab-height);
   border-radius: var(--border-radius);
   background: var(--green);
-  transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translate(${({ left }) => left}px, ${({ top }) => top}px);
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    height 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
   @media (max-width: 600px) {
     top: auto;
     bottom: 0;
-    width: 100%;
-    max-width: var(--tab-width);
+    left: 0;
+    width: ${({ width }) => width || 0}px;
     height: 2px;
-    margin-left: 50px;
-    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
-  }
-  @media (max-width: 480px) {
-    margin-left: 25px;
+    transform: translateX(${({ left }) => left}px);
   }
 `;
 
@@ -193,6 +177,7 @@ const Jobs = () => {
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
+  const [highlight, setHighlight] = useState({ left: 0, top: 0, width: 0 });
   const tabs = useRef([]);
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -204,6 +189,26 @@ const Jobs = () => {
 
     sr.reveal(revealContainer.current, srConfig());
   }, [prefersReducedMotion]);
+
+  // Company names vary in width, so measure the active tab instead of assuming --tab-width.
+  useLayoutEffect(() => {
+    const updateHighlight = () => {
+      const tab = tabs.current[activeTabId];
+      if (!tab) {
+        return;
+      }
+
+      setHighlight({
+        left: tab.offsetLeft,
+        top: tab.offsetTop,
+        width: tab.offsetWidth,
+      });
+    };
+
+    updateHighlight();
+    window.addEventListener('resize', updateHighlight);
+    return () => window.removeEventListener('resize', updateHighlight);
+  }, [activeTabId, jobsData]);
 
   const focusTab = () => {
     if (tabs.current[tabFocus]) {
@@ -268,7 +273,7 @@ const Jobs = () => {
                 </StyledTabButton>
               );
             })}
-          <StyledHighlight activeTabId={activeTabId} />
+          <StyledHighlight left={highlight.left} top={highlight.top} width={highlight.width} />
         </StyledTabList>
 
         <StyledTabPanels>
