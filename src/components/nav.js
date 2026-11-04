@@ -134,8 +134,11 @@ const StyledLinks = styled.div`
 `;
 
 const Nav = ({ isHome }) => {
-  const [isMounted, setIsMounted] = useState(!isHome);
   const isLoading = useIsLoading();
+  // Mount the nav only after the home loader finishes — same as the old
+  // layout swap. Mounting it underneath the loader left the entrance
+  // transitions in a bad state on production (empty / invisible chrome).
+  const [isMounted, setIsMounted] = useState(!isHome);
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -144,14 +147,14 @@ const Nav = ({ isHome }) => {
   };
 
   useEffect(() => {
-    if (prefersReducedMotion || isLoading) {
+    if (prefersReducedMotion) {
       return;
     }
 
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prefersReducedMotion, isLoading]);
+  }, [prefersReducedMotion]);
 
   useEffect(() => {
     if (prefersReducedMotion || isLoading) {
@@ -161,6 +164,12 @@ const Nav = ({ isHome }) => {
     const timeout = setTimeout(() => setIsMounted(true), 100);
     return () => clearTimeout(timeout);
   }, [isLoading, prefersReducedMotion]);
+
+  // Loader covers the screen; keep nav out of the tree until it is done so
+  // the fade-in runs on a fresh mount the way it did before the SEO change.
+  if (isLoading) {
+    return null;
+  }
 
   const timeout = isHome ? loaderDelay : 0;
   const fadeClass = isHome ? 'fade' : '';
@@ -215,7 +224,7 @@ const Nav = ({ isHome }) => {
             <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <>{Logo}</>
+                  {Logo}
                 </CSSTransition>
               )}
             </TransitionGroup>
@@ -227,7 +236,7 @@ const Nav = ({ isHome }) => {
                     navLinks &&
                     navLinks.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                        <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                        <li style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
                           <Link to={url}>{name}</Link>
                         </li>
                       </CSSTransition>
