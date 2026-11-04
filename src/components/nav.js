@@ -146,9 +146,15 @@ const StyledLinks = styled.div`
 
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
-  const scrollDirection = useScrollDirection({ initialDirection: 'down' });
-  const [scrolledToTop, setScrolledToTop] = useState(true);
   const isLoading = useIsLoading();
+  // Start as 'up' and ignore tiny scroll jitter (mobile URL bar / loader unlock),
+  // otherwise production can hide the fixed header off-screen on first paint.
+  const scrollDirection = useScrollDirection({
+    initialDirection: 'up',
+    thresholdPixels: 100,
+    off: isLoading,
+  });
+  const [scrolledToTop, setScrolledToTop] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const handleScroll = () => {
@@ -156,13 +162,14 @@ const Nav = ({ isHome }) => {
   };
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isLoading) {
       return;
     }
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, isLoading]);
 
   useEffect(() => {
     if (prefersReducedMotion || isLoading) {
